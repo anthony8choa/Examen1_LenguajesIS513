@@ -25,3 +25,6 @@ Route::get('/directorio/crearcontacto',[contactosController::class,'crearcontact
 
 
 Route::post('/directorio/guardarcontacto',[contactosController::class,'guardarcontacto'])->name('contacto.guardar');
+
+
+Route::get('/directorio/buscar',[directoriosController::class,'buscar'])->name('contacto.buscar');

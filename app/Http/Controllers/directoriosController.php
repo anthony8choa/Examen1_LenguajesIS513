@@ -40,4 +40,9 @@ class directoriosController extends Controller
         return redirect('/directorio/mostrar');
 
     }
+
+    public function buscar(Request $request, $id){
+        $directorio = directorio::find();
+        $directorio->correo = $request->correo;
+    }
 }
