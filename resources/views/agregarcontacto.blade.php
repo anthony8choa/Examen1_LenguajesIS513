@@ -43,17 +43,20 @@
                             <h3 class="card-header">Agregar Contacto</h3>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <form>
-                                        <label for="">C&oacute;digo de entrada</label>
-                                        <input type="text" name="codigo" class="form-control" readonly>
-                                        <label for="">Nombre</label>
+                                
+                                    <form action="{{route('contacto.guardar')}}" method="POST" >
+                                        @csrf
+                                        @method('POST')
+                                        <label for="codigo">C&oacute;digo de entrada</label>
+                                        <input type="text" name="codigo" class="form-control">
+                                        <label for="nombre">Nombre</label>
                                         <input type="text" name="nombre" class="form-control">
-                                        <label for="">Apellido</label>
+                                        <label for="apellido">Apellido</label>
                                         <input type="text" name="apellido" class="form-control">
-                                        <label for="">Tel&eacute;fono</label>
+                                        <label for="telefono">Tel&eacute;fono</label>
                                         <input type="text" name="telefono" class="form-control">
                                         
-                                        <button class="btn btn-primary">Guardar</button>
+                                        <<button type="submit">guardar</button>
                                         <a href="#" class="btn btn-info">Regresar</a>
                                         
                                     </form>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\directoriosController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\contactosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,9 @@ Route::get('/directorio/mostrar',[directoriosController:: class,'mostrardirector
 Route::get('/directorio/eliminar/{id}',[directoriosController:: class,'eliminar'])->name('directorios.eliminar');
 
 Route::get('/duenios/destroy/{id}',[directoriosController:: class,'destroy'])->name('directorios.destruir');
+
+
+Route::get('/directorio/crearcontacto',[contactosController::class,'crearcontacto'])->name('contacto.crear');
+
+
+Route::post('/directorio/guardarcontacto',[contactosController::class,'guardarcontacto'])->name('contacto.guardar');
